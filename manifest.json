@@ -1,0 +1,51 @@
+{
+    "name": "LibreTranslate",
+    "id": "libretranslate",
+    "packaging_format": 1,
+    "description": {
+        "en": "Open Source Machine Translation API, entirely self-hosted",
+        "fr": "API de traduction automatique Open Source, entièrement auto-hébergée"
+    },
+    "version": "1.2.3~ynh1",
+    "url": "https://libretranslate.com/",
+    "upstream": {
+        "license": "AGPL-3.0",
+        "website": "https://libretranslate.com/",
+        "demo": "https://libretranslate.com/",
+        "admindoc": "https://libretranslate.com/docs/",
+        "userdoc": "https://yunohost.org/apps",
+        "code": "https://github.com/LibreTranslate/LibreTranslate"
+    },
+    "license": "AGPL-3.0",
+    "maintainer": {
+        "name": "John doe",
+        "email": "john.doe@example.com"
+    },
+    "requirements": {
+        "yunohost": ">= 4.2.4"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "example": "example.com"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "example": "/libretranslate",
+                "default": "/libretranslate"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "default": true
+            }
+        ]
+    }
+}

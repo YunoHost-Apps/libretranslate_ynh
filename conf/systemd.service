@@ -1,0 +1,15 @@
+[Unit]
+Description=LibreTranslate
+Documentation=https://github.com/uav4geo/LibreTranslate
+After=network.target
+
+[Service]
+User=__APP__
+Group=__APP__
+Restart=always
+Type=simple
+WorkingDirectory=__FINALPATH__
+ExecStart=/usr/local/bin/pipenv run python3 __FINALPATH__/.venv/bin/libretranslate --host 127.0.0.1 --port __PORT__
+
+[Install]
+WantedBy=multi-user.target
