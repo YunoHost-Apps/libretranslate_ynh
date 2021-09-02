@@ -11,7 +11,8 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-API de traduction automatique Open Source, entièrement auto-hébergée
+Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
+
 
 **Version incluse :** 1.2.3~ynh1
 
@@ -20,7 +21,6 @@ API de traduction automatique Open Source, entièrement auto-hébergée
 ## Captures d'écran
 
 ![](./doc/screenshots/screenshot.png)
-![](./doc/screenshots/DESCRIPTION.md)
 
 ## Documentations et ressources
 
