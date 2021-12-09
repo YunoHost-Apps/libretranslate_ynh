@@ -1,7 +1,6 @@
-SOURCE_URL=https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.2.3.tar.gz
-SOURCE_SUM=2dcebaf97cb35fc5bb8c998d477ab0c7f9d5aabc96fd30dbf587bb10311be099
+SOURCE_URL=https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.2.5.tar.gz
+SOURCE_SUM=22b6880ef5dca0c98e9ce72d52ff8f1a70071080cfbcb3898d28b789f16f4a3e
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
 SOURCE_EXTRACT=true
