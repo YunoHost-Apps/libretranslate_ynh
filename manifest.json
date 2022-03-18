@@ -6,7 +6,7 @@
         "en": "Open Source Machine Translation API, entirely self-hosted",
         "fr": "API de traduction automatique Open Source, entièrement auto-hébergée"
     },
-    "version": "1.2.5~ynh1",
+    "version": "1.2.7~ynh1",
     "url": "https://libretranslate.com/",
     "upstream": {
         "license": "AGPL-3.0",
@@ -23,12 +23,12 @@
     "requirements": {
         "yunohost": ">= 4.3.0"
     },
-    "multi_instance": true,
+    "multi_instance": false,
     "services": [
         "nginx"
     ],
     "arguments": {
-        "install" : [
+        "install": [
             {
                 "name": "domain",
                 "type": "domain"
