@@ -11,35 +11,21 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-API de traduction automatique Open Source, entièrement auto-hébergée
+Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
-**Version incluse :** 1.2.3~ynh1
+
+**Version incluse :** 1.2.7~ynh1
 
 **Démo :** https://libretranslate.com/
 
 ## Captures d'écran
 
-![](./doc/screenshots/example.jpg)
-
-## Avertissements / informations importantes
-
-* Any known limitations, constrains or stuff not working, such as (but not limited to):
-    * requiring a full dedicated domain ?
-    * architectures not supported ?
-    * not-working single-sign on or LDAP integration ?
-    * the app requires an important amount of RAM / disk / .. to install or to work properly
-    * etc...
-
-* Other infos that people should be aware of, such as:
-    * any specific step to perform after installing (such as manually finishing the install, specific admin credentials, ...)
-    * how to configure / administrate the application if it ain't obvious
-    * upgrade process / specificities / things to be aware of ?
-    * security considerations ?
+![](./doc/screenshots/screenshot.png)
+![](./doc/screenshots/DESCRIPTION.md)
 
 ## Documentations et ressources
 
 * Site officiel de l'app : https://libretranslate.com/
-* Documentation officielle utilisateur : https://yunohost.org/apps
 * Documentation officielle de l'admin : https://libretranslate.com/docs/
 * Dépôt de code officiel de l'app : https://github.com/LibreTranslate/LibreTranslate
 * Documentation YunoHost pour cette app : https://yunohost.org/app_libretranslate
