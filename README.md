@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Open Source Machine Translation API, entirely self-hosted
 
-**Shipped version:** 1.2.3~ynh1
+**Shipped version:** 1.3.2~ynh1
 
 **Demo:** https://libretranslate.com/
 
