@@ -5,15 +5,16 @@ It shall NOT be edited by hand.
 
 # LibreTranslate pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+
 [![Installer LibreTranslate avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer LibreTranslate rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer LibreTranslate rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
@@ -22,16 +23,16 @@ Free and Open Source Machine Translation API, entirely self-hosted. Unlike other
 
 **Démo :** https://libretranslate.com/
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de LibreTranslate](./doc/screenshots/screenshot.png)
-![Capture d'écran de LibreTranslate](./doc/screenshots/DESCRIPTION.md)
+![Capture d’écran de LibreTranslate](./doc/screenshots/screenshot.png)
+![Capture d’écran de LibreTranslate](./doc/screenshots/DESCRIPTION.md)
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://libretranslate.com/>
-* Documentation officielle de l'admin : <https://libretranslate.com/docs/>
-* Dépôt de code officiel de l'app : <https://github.com/LibreTranslate/LibreTranslate>
+* Site officiel de l’app : <https://libretranslate.com/>
+* Documentation officielle de l’admin : <https://libretranslate.com/docs/>
+* Dépôt de code officiel de l’app : <https://github.com/LibreTranslate/LibreTranslate>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_libretranslate>
 * Signaler un bug : <https://github.com/YunoHost-Apps/libretranslate_ynh/issues>
 
@@ -47,4 +48,4 @@ ou
 sudo yunohost app upgrade libretranslate -u https://github.com/YunoHost-Apps/libretranslate_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
