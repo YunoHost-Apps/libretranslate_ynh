@@ -31,7 +31,7 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Installing LibreTranslate..." --weight=1
 
-sudo -u $app python3 -m pip install pipenv
+ynh_exec_warn_less python3 -m pip install pipenv
 
 pushd $install_dir
 	mkdir -p .venv
