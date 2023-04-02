@@ -26,7 +26,6 @@ Free and Open Source Machine Translation API, entirely self-hosted. Unlike other
 ## Screenshots
 
 ![Screenshot of LibreTranslate](./doc/screenshots/screenshot.png)
-![Screenshot of LibreTranslate](./doc/screenshots/DESCRIPTION.md)
 
 ## Documentation and resources
 
