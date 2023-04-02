@@ -2,12 +2,12 @@ packaging_format = 2
 
 id = "libretranslate"
 name = "LibreTranslate"
-description.en = "Open Source Machine Translation API, entirely self-hosted"
-description.fr = "API de traduction automatique Open Source, entièrement auto-hébergée"
+description.en = "Open Source Machine Translation API"
+description.fr = "API de traduction automatique Open Source"
 
 version = "1.3.10~ynh1"
 
-maintainers = ["John doe"]
+maintainers = [""]
 
 [upstream]
 license = "AGPL-3.0"
@@ -20,8 +20,8 @@ code = "https://github.com/LibreTranslate/LibreTranslate"
 yunohost = ">= 11.1.15"
 architectures = "all"
 multi_instance = true
-ldap = "not_relevant" 
-sso = "not_relevant" 
+ldap = false
+sso = true
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -46,7 +46,6 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
-    main.default = 5000
 
     [resources.apt]
     packages = "python3, python3-venv"
