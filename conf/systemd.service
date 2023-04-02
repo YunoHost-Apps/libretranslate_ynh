@@ -8,8 +8,8 @@ User=__APP__
 Group=__APP__
 Restart=always
 Type=simple
-WorkingDirectory=__FINALPATH__
-ExecStart=/usr/local/bin/pipenv run python3 __FINALPATH__/.venv/bin/libretranslate --host 127.0.0.1 --port __PORT__ --load-only en,fr --frontend-language-target en
+WorkingDirectory=__INSTALL_DIR__
+ExecStart=/usr/local/bin/pipenv run python3 __INSTALL_DIR__/.venv/bin/libretranslate --host 127.0.0.1 --port __PORT__ --load-only en,fr --frontend-language-target en
 
 [Install]
 WantedBy=multi-user.target
