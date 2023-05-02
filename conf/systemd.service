@@ -9,6 +9,7 @@ Group=__APP__
 Restart=always
 Type=simple
 WorkingDirectory=__INSTALL_DIR__
+Environment="__YNH_NODE_LOAD_PATH__:__INSTALL_DIR__/.local/bin"
 ExecStart=__INSTALL_DIR__/venv/bin/libretranslate --host 127.0.0.1 --port __PORT__ --load-only en,fr --frontend-language-target en
 
 # Sandboxing options to harden security
