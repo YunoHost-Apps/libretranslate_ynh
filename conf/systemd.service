@@ -9,7 +9,7 @@ Group=__APP__
 Restart=always
 Type=simple
 WorkingDirectory=__INSTALL_DIR__
-ExecStart=/usr/local/bin/pipenv run python3 __INSTALL_DIR__/.venv/bin/libretranslate --host 127.0.0.1 --port __PORT__ --load-only en,fr --frontend-language-target en
+ExecStart=__INSTALL_DIR__/venv/bin/libretranslate --host 127.0.0.1 --port __PORT__ --load-only en,fr --frontend-language-target en
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
