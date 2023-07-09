@@ -38,10 +38,12 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 ynh_script_progression --message="Installing LibreTranslate..." --weight=2
 
+ynh_secure_remove $install_dir/.venv
+
 pushd $install_dir
 	python3 -m venv $install_dir/venv
 	source $install_dir/venv/bin/activate
-	ynh_exec_warn_less pip install libretranslate==$libretranslate_version
+	ynh_exec_warn_less pip install libretranslate==$libretranslate_version toml
 popd
 
 #=================================================
