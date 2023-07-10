@@ -1,5 +1,3 @@
 test_format = 1.0
 
 [default]
-
-test_upgrade_from.0fda158.name = "1.3.11~ynh1"
