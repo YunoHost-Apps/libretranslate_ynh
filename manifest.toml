@@ -5,7 +5,7 @@ name = "LibreTranslate"
 description.en = "Open Source Machine Translation API"
 description.fr = "API de traduction automatique Open Source"
 
-version = "1.3.11~ynh1"
+version = "1.3.11~ynh2"
 
 maintainers = [""]
 
@@ -17,7 +17,7 @@ admindoc = "https://libretranslate.com/docs/"
 code = "https://github.com/LibreTranslate/LibreTranslate"
 
 [integration]
-yunohost = ">= 11.1.19"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
 ldap = false

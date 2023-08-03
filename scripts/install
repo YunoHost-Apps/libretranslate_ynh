@@ -21,15 +21,12 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression --message="Installing dependencies..." --weight=2
-
-ynh_exec_warn_less python3 -m pip install pipenv
-
 ynh_script_progression --message="Installing LibreTranslate..." --weight=2
 
 pushd $install_dir
-	mkdir -p .venv
-	PIPENV_VENV_IN_PROJECT="enabled" PIPENV_SKIP_LOCK=true ynh_exec_warn_less python3 -m pipenv install libretranslate==$libretranslate_version  2>&1
+	python3 -m venv $install_dir/venv
+	source $install_dir/venv/bin/activate
+	ynh_exec_warn_less pip install libretranslate==$libretranslate_version toml
 popd
 
 #=================================================
