@@ -59,7 +59,7 @@ yunohost service add $app --description="Machine Translation API" --log="/var/lo
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name="${app}"  --action="start" 
+ynh_systemd_action --service_name="${app}" --action="start" 
 
 #=================================================
 # GENERIC FINALIZATION
