@@ -5,7 +5,7 @@ name = "LibreTranslate"
 description.en = "Open Source Machine Translation API"
 description.fr = "API de traduction automatique Open Source"
 
-version = "1.3.11~ynh2"
+version = "1.3.12~ynh1"
 
 maintainers = [""]
 
@@ -29,7 +29,6 @@ ram.runtime = "50M"
 [install]
     [install.domain]
     type = "domain"
-    full_domain = true
 
     [install.init_main_permission]
     type = "group"
