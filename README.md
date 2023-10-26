@@ -32,6 +32,7 @@ Free and Open Source Machine Translation API, entirely self-hosted. Unlike other
 * Official app website: <https://libretranslate.com/>
 * Official admin documentation: <https://libretranslate.com/docs/>
 * Upstream app code repository: <https://github.com/LibreTranslate/LibreTranslate>
+* YunoHost Store: <https://apps.yunohost.org/app/libretranslate>
 * Report a bug: <https://github.com/YunoHost-Apps/libretranslate_ynh/issues>
 
 ## Developer info
