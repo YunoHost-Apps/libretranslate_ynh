@@ -7,7 +7,7 @@ description.fr = "API de traduction automatique Open Source"
 
 version = "1.5.0~ynh1"
 
-maintainers = [""]
+maintainers = ["Thovi98"]
 
 [upstream]
 license = "AGPL-3.0"
