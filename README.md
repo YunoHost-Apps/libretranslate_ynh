@@ -19,11 +19,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
 
-<
-
-
-
-
+**Shipped version:** 1.5.1~ynh1
 
 **Demo:** https://libretranslate.com/
 
