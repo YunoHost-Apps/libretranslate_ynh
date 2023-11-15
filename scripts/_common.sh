@@ -4,7 +4,7 @@
 # COMMON VARIABLES
 #=================================================
 
-libretranslate_version="1.5.1"
+libretranslate_version="1.5.2"
 
 #=================================================
 # PERSONAL HELPERS
