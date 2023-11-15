@@ -5,7 +5,7 @@ name = "LibreTranslate"
 description.en = "Open Source Machine Translation API"
 description.fr = "API de traduction automatique Open Source"
 
-version = "1.5.1~ynh1"
+version = "1.5.2~ynh1"
 
 maintainers = ["Thovi98"]
 
