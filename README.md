@@ -7,9 +7,11 @@ It shall NOT be edited by hand.
 
 [![Integration level](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![Working status](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
 
-[![Install LibreTranslate with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
+[![Install LibreTranslate with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslat
 
-*[Read this README in other languages.](./ALL_README.md)*
+
+*[Read this README is other languages.](./ALL_README.m
+
 
 > *This package allows you to install LibreTranslate quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
