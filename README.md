@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install LibreTranslate with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install LibreTranslate quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -19,7 +19,7 @@ It shall NOT be edited by hand.
 Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
 
-**Shipped version:** 1.5.6~ynh1
+**Shipped version:** 1.5.7~ynh1
 
 **Demo:** <https://libretranslate.com/>
 
