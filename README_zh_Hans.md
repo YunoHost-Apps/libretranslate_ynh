@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 LibreTranslate
+# YunoHost 上的 LibreTranslate
 
 [![集成程度](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![工作状态](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
 
@@ -19,7 +19,7 @@
 Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
 
-**分发版本：** 1.5.7~ynh1
+**分发版本：** 1.6.0~ynh1
 
 **演示：** <https://libretranslate.com/>
 
