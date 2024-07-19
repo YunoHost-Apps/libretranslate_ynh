@@ -27,6 +27,13 @@ pushd $install_dir
 	python3 -m venv $install_dir/venv
 	source $install_dir/venv/bin/activate
 	ynh_exec_warn_less pip install libretranslate=="$(ynh_app_upstream_version)" toml
+        
+        # Install additional languages (FIXME!!!)
+        venv/bin/libretranslate --update-models &
+        export LT-PID="$!"
+        if [ ss -tulpen | grep '127.0.0.1:5000' ] ; then
+            kill -INT "$!"
+        fi
 popd
 
 #=================================================
