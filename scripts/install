@@ -10,9 +10,9 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# DOWNLOAD, CHECK AND UNPACK SOURCE
+# SETUP PERMISSIONS
 #=================================================
-ynh_script_progression --message="Setting up source files..." --weight=1
+ynh_script_progression --message="Setting up permissions..." --weight=1
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
@@ -34,12 +34,12 @@ pushd $install_dir
 	    ynh_script_progression --message="Installing additional models..." --weight=5
 
 	    # ...if yes, download models...
-            venv/bin/libretranslate --update-models &
-
-	    # ...and then kill the libretranslate process 
-	    # because it was started after downloading models!
+            venv/bin/libretranslate --update-models --port 50005 &
 	    export LT_PID="$!"
-            if ss -tulpen | grep '127.0.0.1:5000' ; then
+
+	    # ...and then kill the libretranslate WebUI / API 
+	    # because it was started after downloading models!
+            if ss -tulpen | grep '127.0.0.1:50005' ; then
                 kill -INT "$LT_PID"
             fi
 	fi
