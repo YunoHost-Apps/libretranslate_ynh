@@ -10,9 +10,9 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# DOWNLOAD, CHECK AND UNPACK SOURCE
+# SETUP PERMISSIONS
 #=================================================
-ynh_script_progression --message="Setting up source files..." --weight=1
+ynh_script_progression --message="Setting up permissions..." --weight=1
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
@@ -27,6 +27,22 @@ pushd $install_dir
 	python3 -m venv $install_dir/venv
 	source $install_dir/venv/bin/activate
 	ynh_exec_warn_less pip install libretranslate=="$(ynh_app_upstream_version)" toml
+        
+	# WARNING!!! CODE BELOW WASN'T TESTED!!! RUN IN DEBUG MODE FROM SHELL!!!
+        # Checking if additional_languages was enabled...
+	if [ "$additional_languages" = true ] ; then
+	    ynh_script_progression --message="Installing additional models..." --weight=5
+
+	    # ...if yes, download models...
+            venv/bin/libretranslate --update-models --port 50005 &
+	    export LT_PID="$!"
+
+	    # ...and then kill the libretranslate WebUI / API 
+	    # because it was started after downloading models!
+            until ss -tulpen | grep '127.0.0.1:50005' ; do
+                kill -INT "$LT_PID"
+	    done
+	fi
 popd
 
 #=================================================
