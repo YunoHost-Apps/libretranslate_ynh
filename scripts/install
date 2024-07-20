@@ -39,9 +39,9 @@ pushd $install_dir
 
 	    # ...and then kill the libretranslate WebUI / API 
 	    # because it was started after downloading models!
-            if ss -tulpen | grep '127.0.0.1:50005' ; then
+            until ss -tulpen | grep '127.0.0.1:50005' ; do
                 kill -INT "$LT_PID"
-            fi
+	    done
 	fi
 popd
 
