@@ -31,13 +31,14 @@ pushd $install_dir
 	# WARNING!!! CODE BELOW WASN'T TESTED!!! RUN IN DEBUG MODE FROM SHELL!!!
         # Checking if additional_languages was enabled...
 	if [ "$additional_languages" = true ] ; then
+	    ynh_script_progression --message="Installing additional models..." --weight=5
 
 	    # ...if yes, download models...
             venv/bin/libretranslate --update-models &
 
 	    # ...and then kill the libretranslate process 
 	    # because it was started after downloading models!
-	    export LT-PID="$!"
+	    export LT_PID="$!"
             if ss -tulpen | grep '127.0.0.1:5000' ; then
                 kill -INT "$LT_PID"
             fi
