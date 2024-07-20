@@ -35,7 +35,7 @@ ram.runtime = "50M"
     default = "visitors"
 
     [install.additional_languages]
-    ask.en = "Do install additional language models? WARNING: It will take ~6 GB of your free space."
+    ask.en = "Do install additional language models? WARNING: It will take ~6 GB of your free space"
     help.en = "By default, installed models are English->French and French->English."
     yes = "true"
     no = "false"
