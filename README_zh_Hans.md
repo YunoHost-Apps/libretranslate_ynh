@@ -5,7 +5,7 @@
 
 # YunoHost 上的 LibreTranslate
 
-[![集成程度](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![工作状态](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/libretranslate.svg)](https://ci-apps.yunohost.org/ci/apps/libretranslate/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
 
 [![使用 YunoHost 安装 LibreTranslate](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 

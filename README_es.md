@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # LibreTranslate para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/libretranslate.svg)](https://ci-apps.yunohost.org/ci/apps/libretranslate/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
 
 [![Instalar LibreTranslate con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 
@@ -37,7 +37,7 @@ Free and Open Source Machine Translation API, entirely self-hosted. Unlike other
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/libretranslate_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/libretranslate_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
