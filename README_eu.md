@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # LibreTranslate YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/libretranslate.svg)](https://dash.yunohost.org/appci/app/libretranslate) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/libretranslate.svg)](https://ci-apps.yunohost.org/ci/apps/libretranslate/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
 
 [![Instalatu LibreTranslate YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 
