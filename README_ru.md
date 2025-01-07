@@ -5,7 +5,9 @@
 
 # LibreTranslate для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/libretranslate.svg)](https://ci-apps.yunohost.org/ci/apps/libretranslate/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/libretranslate)](https://ci-apps.yunohost.org/ci/apps/libretranslate/)
+![Состояние работы](https://apps.yunohost.org/badge/state/libretranslate)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/libretranslate)
 
 [![Установите LibreTranslate с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 
