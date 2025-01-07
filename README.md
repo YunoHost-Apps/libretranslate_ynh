@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # LibreTranslate for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/libretranslate.svg)](https://ci-apps.yunohost.org/ci/apps/libretranslate/) ![Working status](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/libretranslate)](https://ci-apps.yunohost.org/ci/apps/libretranslate/)
+![Working status](https://apps.yunohost.org/badge/state/libretranslate)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/libretranslate)
 
 [![Install LibreTranslate with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 

@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # LibreTranslate voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/libretranslate.svg)](https://ci-apps.yunohost.org/ci/apps/libretranslate/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/libretranslate.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/libretranslate.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/libretranslate)](https://ci-apps.yunohost.org/ci/apps/libretranslate/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/libretranslate)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/libretranslate)
 
 [![LibreTranslate met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=libretranslate)
 
