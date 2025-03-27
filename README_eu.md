@@ -21,7 +21,7 @@ EZ editatu eskuz.
 Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
 
-**Paketatutako bertsioa:** 1.6.4~ynh1
+**Paketatutako bertsioa:** 1.6.5~ynh1
 
 **Demoa:** <https://libretranslate.com/>
 
@@ -41,7 +41,7 @@ Free and Open Source Machine Translation API, entirely self-hosted. Unlike other
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/libretranslate_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/libretranslate_ynh/tree/testing --debug

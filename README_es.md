@@ -3,7 +3,7 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# LibreTranslate para Yunohost
+# LibreTranslate para YunoHost
 
 [![Nivel de integración](https://apps.yunohost.org/badge/integration/libretranslate)](https://ci-apps.yunohost.org/ci/apps/libretranslate/)
 ![Estado funcional](https://apps.yunohost.org/badge/state/libretranslate)
@@ -21,7 +21,7 @@ No se debe editar a mano.
 Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
 
 
-**Versión actual:** 1.6.4~ynh1
+**Versión actual:** 1.6.5~ynh1
 
 **Demo:** <https://libretranslate.com/>
 
