@@ -26,7 +26,7 @@ yunohost service add "$app" --description="Machine Translation API" --log="/var/
 ynh_config_add_logrotate
 touch "/var/log/$app/$app.log"
 
-du -sh "$install_dir/venv/lib/python3.*/site-packages"/*
+du -sh "$install_dir/venv/lib/python3.*"
 du -sh "$install_dir/venv/lib/"* | sort -hr | head -n 10
 
 
@@ -38,7 +38,7 @@ ynh_script_progression "Starting $app's systemd service..."
 # Start a systemd service
 ynh_systemctl --service="$app" --action="start"
 
-du -sh "$install_dir/venv/lib/python3.*/site-packages"/*
+du -sh "$install_dir/venv/lib/python3.*"
 du -sh "$install_dir/venv/lib/"* | sort -hr | head -n 10
 
 
