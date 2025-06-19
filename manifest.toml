@@ -17,12 +17,14 @@ admindoc = "https://libretranslate.com/docs/"
 code = "https://github.com/LibreTranslate/LibreTranslate"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 12.0.9"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
+
 ldap = false
 sso = true
+
 disk = "50M"
 ram.build = "1500M"
 ram.runtime = "50M"

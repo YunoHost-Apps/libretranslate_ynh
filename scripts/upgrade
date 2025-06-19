@@ -13,7 +13,7 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression "Installing LibreTranslate..."
+ynh_script_progression "Upgrading source files..."
 
 ynh_safe_rm "$install_dir/.venv"
 
