@@ -1,0 +1,1 @@
+API de traduction automatique gratuite et open source, entièrement auto-hébergée. Contrairement à d'autres API, elle ne s'appuie pas sur des fournisseurs propriétaires tels que Google ou Azure pour effectuer les traductions. Au lieu de cela, son moteur de traduction est alimenté par la bibliothèque open source Argos Translate.

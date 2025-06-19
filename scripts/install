@@ -6,7 +6,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression "Installing LibreTranslate..."
+ynh_script_progression "Setting up source files..."
 
 install_via_venv
 
