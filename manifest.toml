@@ -41,6 +41,9 @@ ram.runtime = "50M"
     [resources.sources]
     url = "https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.7.2.tar.gz"
     sha256 = "3f12cdb57c1eef4733a57c5509b0f84c1d18ac4d2ad09e385af60cd8e2deb394"
+    in_subdir = true
+
+    autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
 
