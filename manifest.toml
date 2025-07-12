@@ -39,6 +39,8 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources]
+    url = "https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.7.2.tar.gz"
+    sha256 = "3f12cdb57c1eef4733a57c5509b0f84c1d18ac4d2ad09e385af60cd8e2deb394"
 
     [resources.system_user]
 
@@ -50,4 +52,4 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "python3, python3-venv"
+    packages = "python3, python3-venv, python3-pip, python3-dev, build-essential, libssl-dev, libffi-dev, python3-setuptools, libicu-dev, python3-icu"
