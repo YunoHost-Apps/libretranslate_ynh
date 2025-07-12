@@ -14,7 +14,7 @@ Restart=always
 Type=simple
 WorkingDirectory=__INSTALL_DIR__
 EnvironmentFile=__INSTALL_DIR__/.env
-ExecStart=__INSTALL_DIR__/venv/bin/gunicorn --workers 3 --bind unix:libretranslate.sock -m 007 wsgi:app --load-only en,fr --frontend-language-target en
+ExecStart=__INSTALL_DIR__/venv/bin/gunicorn --workers 3 --bind unix:libretranslate.sock -m 007 wsgi:app
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
