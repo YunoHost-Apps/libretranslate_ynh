@@ -57,7 +57,7 @@ pushd $install_dir
 popd
 
 pushd "$install_dir"
-	ynh_hide_warnings ynh_exec_as_app "$install_dir"/venv/bin/libretranslate --update-models --load_only_lang_codes "$used_languages"
+	ynh_hide_warnings ynh_exec_as_app "$install_dir"/venv/bin/libretranslate --update-models --load_only "$used_languages"
 popd
 
 #=================================================
