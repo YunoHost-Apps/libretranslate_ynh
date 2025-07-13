@@ -45,10 +45,11 @@ ram.runtime = "50M"
     optional = true
  
     [install.cuda]
-    ask.en = "(Optional) Insert here the api key from the chosen weather provider"
+    ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
+    help.en = "Cuda installation are way bigger so use them only if your system support it"
     type = "select"
-    choices = ["auto", "cuda", "cpu"]
-    default = "auto"
+    choices = ["cuda", "cpu"]
+    default = "cpu"
 
 
 [resources]
