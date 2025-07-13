@@ -4,6 +4,14 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# ENSURE DOWNWARD COMPATIBILITY
+#=================================================
+ynh_script_progression "Ensuring downward compatibility..."
+
+ynh_app_setting_set_default --key=used_languages --value=$used_languages
+ynh_app_setting_set_default --key=cuda --value=$cpu
+
+#=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
@@ -33,6 +41,16 @@ ynh_script_progression "Upgrading $app dependencies..."
 pushd $install_dir
 	ynh_exec_as_app python3 -m venv "$install_dir/venv"
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade pip gunicorn
+	
+	if [ "$cuda" = "cuda" ]; then
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.2.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+	else  
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.2.0 --extra-index-url https://download.pytorch.org/whl/cpu
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir "numpy<2"
+	
+	fi
+	
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir/" --no-cache-dir
     
     ynh_safe_rm "$install_dir/.cache/pip"

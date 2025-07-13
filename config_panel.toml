@@ -1,0 +1,31 @@
+
+## -----------------------------------------------------------------------------
+## IMPORTANT: In accordance with YunoHost's spirit, please keep things simple and 
+## do not overwhelm the admin with tons of misunderstandable or advanced settings.
+## -----------------------------------------------------------------------------
+
+version = "1.0"
+
+
+[main]
+name.en = "Main configuration"
+name.fr = "Configuration principale"
+services = ["__APP__"]
+
+     
+    [main.config]
+    name.en = "Configuration options"
+    name.fr = "Options de configuration"
+
+        [main.config.used_languages]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,du) or leave blank if you want to download all"
+        bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
+
+        [main.config.cuda]
+        ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
+        type = "select"
+        choices = ["cuda", "cpu"]
+        help.en = "Cuda installations are way bigger so use them only if your system support it"
+        bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"

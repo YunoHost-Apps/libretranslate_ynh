@@ -39,14 +39,14 @@ ram.runtime = "50M"
 
     [install.used_languages]
     ask.en = "Which languages do you plan to use?"
-    help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv) or leave blank if you want to download all"
+    help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,du) or leave blank if you want to download all"
     type = "string"
     default = "en,fr,es,sv"
     optional = true
  
     [install.cuda]
     ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
-    help.en = "Cuda installation are way bigger so use them only if your system support it"
+    help.en = "Cuda installations are way bigger so use them only if your system support it"
     type = "select"
     choices = ["cuda", "cpu"]
     default = "cpu"
