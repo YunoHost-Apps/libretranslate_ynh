@@ -9,7 +9,7 @@ source /usr/share/yunohost/helpers
 ynh_script_progression "Ensuring downward compatibility..."
 
 ynh_app_setting_set_default --key=used_languages --value=$used_languages
-ynh_app_setting_set_default --key=cuda --value=$cpu
+ynh_app_setting_set_default --key=cuda --value=cpu
 
 #=================================================
 # STOP SYSTEMD SERVICE
