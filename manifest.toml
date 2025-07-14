@@ -33,6 +33,10 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
+    [install.path]
+    type = "path"
+    default = "/translate"
+
     [install.init_main_permission]
     type = "group"
     default = "visitors"
@@ -46,7 +50,7 @@ ram.runtime = "50M"
  
     [install.cuda]
     ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
-    help.en = "Cuda installations are way bigger so use them only if your system support it"
+    help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it"
     type = "select"
     choices = ["cuda", "cpu"]
     default = "cpu"

@@ -27,5 +27,5 @@ services = ["__APP__"]
         ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
         type = "select"
         choices = ["cuda", "cpu"]
-        help.en = "Cuda installations are way bigger so use them only if your system support it. Don't forget that yiu have to force the update or to wait for the next one after adapting this."
+        help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it. Don't forget that yiu have to force the update or to wait for the next one after adapting this."
         bind = "ARGOS_DEVICE:/var/www/__APP__/.env"
