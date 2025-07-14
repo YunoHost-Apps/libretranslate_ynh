@@ -28,4 +28,4 @@ services = ["__APP__"]
         type = "select"
         choices = ["cuda", "cpu"]
         help.en = "Cuda installations are way bigger so use them only if your system support it"
-        bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
+        bind = "ARGOS_DEVICE:/var/www/__APP__/.env"
