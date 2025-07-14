@@ -23,7 +23,7 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="db"
 
 
 #=================================================
@@ -52,13 +52,19 @@ pushd $install_dir
 	fi
 	
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir/" --no-cache-dir
-    
-    ynh_safe_rm "$install_dir/.cache/pip"
 popd
 
 pushd "$install_dir"
-	export LOAD_ONLY=$used_languages
-	ynh_hide_warnings ynh_exec_as_app "$install_dir"/venv/bin/libretranslate --update-models
+	ynh_safe_rm "$install_dir/.cache/pip"
+	ynh_safe_rm "$install_dir/docker"
+	ynh_safe_rm "$install_dir/docker-compose.cuda.yml"
+	ynh_safe_rm "$install_dir/docker-compose.yml"
+	ynh_safe_rm "$install_dir/.dockerignore"
+	ynh_safe_rm "$install_dir/docs"
+	ynh_safe_rm "$install_dir/.env.save"
+	ynh_safe_rm "$install_dir/k8s.yaml"
+	ynh_safe_rm "$install_dir/.pre-commit-config.yaml"
+	ynh_safe_rm "$install_dir/scripts"
 popd
 
 #=================================================
