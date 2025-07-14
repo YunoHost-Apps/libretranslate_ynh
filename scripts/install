@@ -47,10 +47,10 @@ pushd "$install_dir"
     ynh_safe_rm "$install_dir/.cache/pip"
 popd
 
-pushd "$install_dir"
-	export LOAD_ONLY=$used_languages
-	ynh_hide_warnings ynh_exec_as_app "$install_dir"/venv/bin/libretranslate --update-models
-popd
+#pushd "$install_dir"
+#	export LOAD_ONLY=$used_languages
+#	ynh_hide_warnings ynh_exec_as_app "$install_dir"/venv/bin/libretranslate --update-models
+#popd
 
 #=================================================
 # SYSTEM CONFIGURATION
