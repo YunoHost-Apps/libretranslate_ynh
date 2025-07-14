@@ -65,6 +65,9 @@ ram.runtime = "50M"
 
     [resources.install_dir]
 
+    [resources.data_dir]
+    subdirs = [ "models" ]
+
     [resources.permissions]
     main.url = "/"
 
