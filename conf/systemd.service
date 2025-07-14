@@ -14,7 +14,7 @@ Restart=always
 Type=simple
 WorkingDirectory=__INSTALL_DIR__
 EnvironmentFile=__INSTALL_DIR__/.env
-ExecStart=__INSTALL_DIR__/venv/bin/libretranslate  --host 127.0.0.1 --port __PORT__ --load-only __USED_LANGUAGES__
+ExecStart=__INSTALL_DIR__/venv/bin/libretranslate  --host 127.0.0.1 --port __PORT__ --load-only __USED_LANGUAGES__ --update-models
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
