@@ -11,6 +11,27 @@ ynh_script_progression "Ensuring downward compatibility..."
 ynh_app_setting_set_default --key=used_languages --value=en,fr
 ynh_app_setting_set_default --key=cuda --value=cpu
 
+# For the config_panel
+ynh_app_setting_set_default --key=suggestions --value=false
+ynh_app_setting_set_default --key=disable_files --value=false
+ynh_app_setting_set_default	 --key=disable_webui --value=false
+
+ynh_app_setting_set_default --key=charlimit --value=-1
+ynh_app_setting_set_default --key=reqlimit --value=-1
+ynh_app_setting_set_default --key=hourly_reqlimit --value=-1
+ynh_app_setting_set_default --key=daily_reqlimit --value=-1
+ynh_app_setting_set_default --key=flood_threshold --value=-1
+ynh_app_setting_set_default --key=timecost --value=-1
+ynh_app_setting_set_default --key=batchlimit --value=-1
+ynh_app_setting_set_default --key=alternatives --value=-1
+
+ynh_app_setting_set_default --key=language_source --value=auto
+ynh_app_setting_set_default --key=language_target --value=locale
+ynh_app_setting_set_default --key=timeout--value=500
+ynh_app_setting_set_default --key=apikey_link --value=
+ynh_app_setting_set_default --key=apikey_domain --value=
+
+
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
