@@ -33,10 +33,6 @@ ram.runtime = "250M"
     [install.domain]
     type = "domain"
 
-    [install.path]
-    type = "path"
-    default = "/translate"
-
     [install.init_main_permission]
     type = "group"
     default = "visitors"
