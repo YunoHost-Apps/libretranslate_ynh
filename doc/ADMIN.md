@@ -2,6 +2,6 @@ If you want to add/remove an api key, [following this guide](https://docs.libret
 
 ```
 yunohost app shell __APP__
-    ltmanage keys add <xxx> (*value of --req-limit*) --char-limit (*optional*) <xxx>
+    ltmanage keys add --key <YOUR_API_NAME> <xxx> (*value of --req-limit*) --char-limit (*optional*) <xxx>
     ltmanage keys remove <api-key>
 ```
