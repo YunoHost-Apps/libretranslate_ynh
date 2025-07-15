@@ -10,11 +10,11 @@ Group=__APP__
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 SyslogIdentifier=__APP__
-
 Restart=always
 Type=simple
 WorkingDirectory=__INSTALL_DIR__
-ExecStart=__INSTALL_DIR__/venv/bin/libretranslate --host 127.0.0.1 --port __PORT__ --load-only en,fr --frontend-language-target en
+EnvironmentFile=__INSTALL_DIR__/.env
+ExecStart=__INSTALL_DIR__/venv/bin/libretranslate
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these

@@ -1,0 +1,144 @@
+
+## -----------------------------------------------------------------------------
+## IMPORTANT: In accordance with YunoHost's spirit, please keep things simple and 
+## do not overwhelm the admin with tons of misunderstandable or advanced settings.
+## -----------------------------------------------------------------------------
+
+version = "1.0"
+
+
+[main]
+name.en = "Configuration options"
+name.fr = "Options de configuration"
+services = ["__APP__"]
+     
+    [main.config]
+    name.en = "General configuration"
+    name.fr = "Configuration générale"
+
+        [main.config.used_languages]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl). If you want to remove a language, you have to remove it in this section, but also manually remove the corresponding model in /home/yunohost.app/libretranslate/models"
+        bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
+
+        [main.config.suggestions]
+        ask.en = "Allow user suggestions"
+        type = "boolean"
+        yes = "true"
+        no = "false"
+        help.en = ""
+        bind = "LT_SUGGESTIONS:/var/www/__APP__/.env"
+
+        [main.config.disable_files]
+        ask.en = "Disable file translation functionality"
+        type = "boolean"
+        yes = "true"
+        no = "false"
+        help.en = ""
+        bind = "LT_DISABLE_FILES_TRANSLATION:/var/www/__APP__/.env"
+
+        [main.config.disable_webui]
+        ask.en = "Disable the web user interface"
+        type = "boolean"
+        yes = "true"
+        no = "false"
+        help.en = ""
+        bind = "LT_DISABLE_WEB_UI:/var/www/__APP__/.env"
+
+        [main.config.language_source]
+        ask.en = "Default source language for frontend"
+        type = "string"
+        help.en = ""
+        bind = "LT_FRONTEND_LANGUAGE_SOURCE:/var/www/__APP__/.env"
+
+        [main.config.language_target]
+        ask.en = "Default target language for frontend"
+        type = "string"
+        help.en = ""
+        bind = "LT_FRONTEND_LANGUAGE_TARGET:/var/www/__APP__/.env"
+
+    [main.specific]
+    name.en = "Specific configuration"
+    name.fr = "Configuration spécifique"
+
+        [main.specific.charlimit]
+        ask.en = "Character limit per translation request"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_CHAR_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.reqlimit]
+        ask.en = "Maximum requests per minute per client"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_REQ_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.hourly_reqlimit]
+        ask.en = "Maximum requests per hour per client"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_HOURLY_REQ_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.daily_reqlimit]
+        ask.en = "Maximum requests per day per client"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_DAILY_REQ_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.flood_threshold]
+        ask.en = "Maximum request limit offenses before ban"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_REQ_FLOOD_THRESHOLD:/var/www/__APP__/.env"
+
+        [main.specific.timecost]
+        ask.en = "Time cost (in seconds) for request limiting"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_REQ_TIME_COST:/var/www/__APP__/.env"
+
+        [main.specific.batchlimit]
+        ask.en = "Maximum number of texts in a batch request"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_BATCH_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.alternatives]
+        ask.en = "Maximum alternative translations"
+        type = "string"
+        help.en = "-1 = no limit"
+        bind = "LT_ALTERNATIVES_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.timeout]
+        ask.en = "Translation timeout in milliseconds"
+        type = "string"
+        help.en = ""
+        bind = "LT_FRONTEND_TIMEOUT:/var/www/__APP__/.env"
+
+        [main.specific.apikey_link]
+        ask.en = "Link where users can obtain an API key"
+        type = "string"
+        help.en = ""
+        bind = "LT_GET_API_KEY_LINK:/var/www/__APP__/.env"
+
+        [main.specific.apikey_domain]
+        ask.en = "Require API key unless request origin matches this domain"
+        type = "string"
+        help.en = ""
+        bind = "LT_REQUIRE_API_KEY_ORIGIN:/var/www/__APP__/.env"
+
+[build]
+name = "Build flavor"
+
+    [build.gpu]
+    name = "Build with gpu support"
+
+        [build.gpu.cuda]
+        ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
+        type = "select"
+        choices = ["cuda", "cpu"]
+        help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it. Don't forget that you have to force the update or to wait for the next one for this to take effect."
+        bind = "ARGOS_DEVICE:/var/www/__APP__/.env"
+
+

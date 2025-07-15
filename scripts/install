@@ -1,14 +1,98 @@
-#!/bin/bash
 
 source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# SPECIFIC SETUP
+# INITIALIZE AND STORE SETTINGS
+#=================================================
+
+ynh_app_setting_set --key=used_languages --value=$used_languages
+ynh_app_setting_set --key=cuda --value=$cuda
+
+# For the config_panel
+suggestions=false
+ynh_app_setting_set --key=suggestions --value=false
+disable_files=false
+ynh_app_setting_set --key=disable_files --value=false
+disable_webui=false
+ynh_app_setting_set --key=disable_webui --value=false
+
+charlimit="-1"
+ynh_app_setting_set --key=charlimit --value=-1
+reqlimit="-1"
+ynh_app_setting_set --key=reqlimit --value=-1
+hourly_reqlimit="-1"
+ynh_app_setting_set --key=hourly_reqlimit --value=-1
+daily_reqlimit="-1"
+ynh_app_setting_set --key=daily_reqlimit --value=-1
+flood_threshold="-1"
+ynh_app_setting_set --key=flood_threshold --value=-1
+timecost="-1"
+ynh_app_setting_set --key=timecost --value=-1
+batchlimit="-1"
+ynh_app_setting_set --key=batchlimit --value=-1
+alternatives="-1"
+ynh_app_setting_set --key=alternatives --value=-1
+
+language_source="auto"
+ynh_app_setting_set --key=language_source --value=auto
+language_target="locale"
+ynh_app_setting_set --key=language_target --value=locale
+timeout="500"
+ynh_app_setting_set --key=timeout --value=500
+apikey_link=""
+ynh_app_setting_set --key=apikey_link --value=
+apikey_domain=""
+ynh_app_setting_set --key=apikey_domain --value=
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-install_via_venv
+ynh_setup_source --dest_dir="$install_dir"
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template=".env" --destination="$install_dir/.env"
+
+#=================================================
+# INSTALL APP DEPENDENCIES
+#=================================================
+ynh_script_progression "Installing $app dependencies..."
+
+pushd "$install_dir"
+	ynh_exec_as_app python3 -m venv "$install_dir/venv"
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade pip gunicorn
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install Babel==2.12.1 && ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" "$install_dir"/scripts/compile_locales.py
+	
+	if [ "$cuda" = "cuda" ]; then
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.2.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+	else  
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.2.0 --extra-index-url https://download.pytorch.org/whl/cpu
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir "numpy<2"
+	fi
+	
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir 
+popd
+
+# Remove unneeded files
+
+pushd "$install_dir"
+	ynh_safe_rm "$install_dir/.cache/pip"
+	ynh_safe_rm "$install_dir/docker"
+	ynh_safe_rm "$install_dir/docker-compose.cuda.yml"
+	ynh_safe_rm "$install_dir/docker-compose.yml"
+	ynh_safe_rm "$install_dir/.dockerignore"
+	ynh_safe_rm "$install_dir/docs"
+	ynh_safe_rm "$install_dir/.env.save"
+	ynh_safe_rm "$install_dir/k8s.yaml"
+	ynh_safe_rm "$install_dir/.pre-commit-config.yaml"
+popd
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -39,3 +123,4 @@ ynh_systemctl --service="$app" --action="start"
 #=================================================
 
 ynh_script_progression "Installation of $app completed"
+
