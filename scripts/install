@@ -57,7 +57,6 @@ pushd "$install_dir"
 	ynh_safe_rm "$install_dir/.env.save"
 	ynh_safe_rm "$install_dir/k8s.yaml"
 	ynh_safe_rm "$install_dir/.pre-commit-config.yaml"
-	ynh_safe_rm "$install_dir/scripts"
 popd
 
 #=================================================
