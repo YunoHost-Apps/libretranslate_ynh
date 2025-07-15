@@ -10,6 +10,26 @@ source /usr/share/yunohost/helpers
 ynh_app_setting_set --key=used_languages --value=$used_languages
 ynh_app_setting_set --key=cuda --value=$cuda
 
+# For the config_panel
+ynh_app_setting_set --key=suggestions --value=false
+ynh_app_setting_set --key=disable_files --value=false
+ynh_app_setting_set --key=disable_webui --value=false
+
+ynh_app_setting_set --key=charlimit --value=-1
+ynh_app_setting_set --key=reqlimit --value=-1
+ynh_app_setting_set --key=hourly_reqlimit --value=-1
+ynh_app_setting_set --key=daily_reqlimit --value=-1
+ynh_app_setting_set --key=flood_threshold --value=-1
+ynh_app_setting_set --key=timecost --value=-1
+ynh_app_setting_set --key=batchlimit --value=-1
+ynh_app_setting_set --key=alternatives --value=-1
+
+ynh_app_setting_set --key=language_source --value=auto
+ynh_app_setting_set --key=language_target --value=locale
+ynh_app_setting_set --key=timeout--value=500
+ynh_app_setting_set --key=apikey_link --value=
+ynh_app_setting_set --key=apikey_domain --value=
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================

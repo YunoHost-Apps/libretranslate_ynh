@@ -8,24 +8,132 @@ version = "1.0"
 
 
 [main]
-name.en = "Main configuration"
-name.fr = "Configuration principale"
+name.en = "Configuration options"
+name.fr = "Options de configuration"
 services = ["__APP__"]
 
      
     [main.config]
-    name.en = "Configuration options"
-    name.fr = "Options de configuration"
+    name.en = "General configuration"
+    name.fr = "Configuration générale"
 
         [main.config.used_languages]
         ask.en = "The languages that you want to use in LibreTranslate"
         type = "string"
-        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,du) or leave blank if you want to download all"
+        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl)"
         bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
 
-        [main.config.cuda]
+        [main.config.suggestions]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = Allow user suggestions"
+        bind = "LT_SUGGESTIONS:/var/www/__APP__/.env"
+
+        [main.config.disable_files]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Disable file translation functionality"
+        bind = "LT_DISABLE_FILES_TRANSLATION:/var/www/__APP__/.env"
+
+        [main.config.disable_webui]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Disable the web user interface"
+        bind = "LT_DISABLE_WEBUI:/var/www/__APP__/.env"
+
+        [main.config.language_source]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Default source language for frontend"
+        bind = "LT_FRONTEND_LANGUAGE_SOURCE:/var/www/__APP__/.env"
+
+        [main.config.language_target]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Default target language for frontend"
+        bind = "LT_FRONTEND_LANGUAGE_TARGET:/var/www/__APP__/.env"
+
+    [main.specific]
+    name.en = "Specific configuration"
+    name.fr = "Configuration spécifique"
+
+        [main.specific.charlimit]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Character limit per translation request"
+        bind = "LT_CHAR_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.reqlimit]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Maximum requests per minute per client"
+        bind = "LT_REQ_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.hourly_reqlimit]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Maximum requests per hour per client"
+        bind = "LT_HOURLY_REQ_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.daily_reqlimit]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Maximum requests per day per client"
+        bind = "LT_DAILY_REQ_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.flood_threshold]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Maximum request limit offenses before ban"
+        bind = "LT_REQ_FLOOD_THRESHOLD:/var/www/__APP__/.env"
+
+        [main.specific.timecost]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Time cost (in seconds) for request limiting"
+        bind = "LT_REQ_TIME_COST:/var/www/__APP__/.env"
+
+        [main.specific.batchlimit]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Maximum number of texts in a batch request"
+        bind = "LT_BATCH_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.alternatives]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Maximum alternative translations"
+        bind = "LT_ALTERNATIVES_LIMIT:/var/www/__APP__/.env"
+
+        [main.specific.timeout]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Translation timeout in milliseconds"
+        bind = "LT_FRONTEND_TIMEOUT:/var/www/__APP__/.env"
+
+        [main.specific.apikey_link]
+        ask.en = "The languages that you want to use in LibreTranslate"
+        type = "string"
+        help.en = "Link where users can obtain an API key"
+        bind = "LT_GET_API_KEY_LINK:/var/www/__APP__/.env"
+
+        [main.specific.apikey_domain]
+        help.en = "Disable file translation functionality"
+        type = "string"
+        help.en = "Require API key unless request origin matches this domain"
+        bind = "LT_REQUIRE_API_KEY_ORIGIN:/var/www/__APP__/.env"
+
+[build]
+name = "Build flavor"
+
+    [build.gpu]
+    name = "Build with gpu support"
+
+        [build.gpu.cuda]
         ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
         type = "select"
         choices = ["cuda", "cpu"]
         help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it. Don't forget that yiu have to force the update or to wait for the next one after adapting this."
         bind = "ARGOS_DEVICE:/var/www/__APP__/.env"
+
+
