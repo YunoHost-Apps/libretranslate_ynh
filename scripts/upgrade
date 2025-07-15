@@ -31,6 +31,9 @@ ynh_app_setting_set_default --key=timeout --value=500
 ynh_app_setting_set_default --key=apikey_link --value=
 ynh_app_setting_set_default --key=apikey_domain --value=
 
+if ynh_app_upgrading_from_version_before 1.7.2~ynh2; then
+   	mv "$install_dir/.local/share/argos-translate/packages/" "$data_dir"/models
+fi
 
 #=================================================
 # STOP SYSTEMD SERVICE
@@ -60,10 +63,6 @@ ynh_config_add --template=".env" --destination="$install_dir/.env"
 ynh_script_progression "Upgrading $app dependencies..."
 
 pushd $install_dir
-	if ynh_app_upgrading_from_version_before 1.7.2~ynh2; then
- 	  	mv ".local/share/argos-translate/packages/" "$data_dir"/models
-	fi
-
 	ynh_exec_as_app python3 -m venv "$install_dir/venv"
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade pip gunicorn
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install Babel==2.12.1 && ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" "$install_dir"/scripts/compile_locales.py
