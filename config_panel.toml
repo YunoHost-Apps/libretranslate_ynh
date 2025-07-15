@@ -25,19 +25,25 @@ services = ["__APP__"]
 
         [main.config.suggestions]
         ask.en = "Allow user suggestions"
-        type = "string"
+        type = "boolean"
+        yes = "true"
+        no = "false"
         help.en = ""
         bind = "LT_SUGGESTIONS:/var/www/__APP__/.env"
 
         [main.config.disable_files]
         ask.en = "Disable file translation functionality"
-        type = "string"
+        type = "boolean"
+        yes = "true"
+        no = "false"
         help.en = ""
         bind = "LT_DISABLE_FILES_TRANSLATION:/var/www/__APP__/.env"
 
         [main.config.disable_webui]
         ask.en = "Disable the web user interface"
-        type = "string"
+        type = "boolean"
+        yes = "true"
+        no = "false"
         help.en = ""
         bind = "LT_DISABLE_WEB_UI:/var/www/__APP__/.env"
 
@@ -60,49 +66,49 @@ services = ["__APP__"]
         [main.specific.charlimit]
         ask.en = "Character limit per translation request"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_CHAR_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.reqlimit]
         ask.en = "Maximum requests per minute per client"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_REQ_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.hourly_reqlimit]
         ask.en = "Maximum requests per hour per client"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_HOURLY_REQ_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.daily_reqlimit]
         ask.en = "Maximum requests per day per client"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_DAILY_REQ_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.flood_threshold]
         ask.en = "Maximum request limit offenses before ban"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_REQ_FLOOD_THRESHOLD:/var/www/__APP__/.env"
 
         [main.specific.timecost]
         ask.en = "Time cost (in seconds) for request limiting"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_REQ_TIME_COST:/var/www/__APP__/.env"
 
         [main.specific.batchlimit]
         ask.en = "Maximum number of texts in a batch request"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_BATCH_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.alternatives]
         ask.en = "Maximum alternative translations"
         type = "string"
-        help.en = ""
+        help.en = "-1 = no limit"
         bind = "LT_ALTERNATIVES_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.timeout]
