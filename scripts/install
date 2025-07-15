@@ -10,23 +10,39 @@ ynh_app_setting_set --key=used_languages --value=$used_languages
 ynh_app_setting_set --key=cuda --value=$cuda
 
 # For the config_panel
+suggestions=false
 ynh_app_setting_set --key=suggestions --value=false
+disable_files=false
 ynh_app_setting_set --key=disable_files --value=false
+disable_webui=false
 ynh_app_setting_set --key=disable_webui --value=false
 
+charlimit="-1"
 ynh_app_setting_set --key=charlimit --value=-1
+reqlimit="-1"
 ynh_app_setting_set --key=reqlimit --value=-1
+hourly_reqlimit="-1"
 ynh_app_setting_set --key=hourly_reqlimit --value=-1
+daily_reqlimit="-1"
 ynh_app_setting_set --key=daily_reqlimit --value=-1
+flood_threshold="-1"
 ynh_app_setting_set --key=flood_threshold --value=-1
+timecost="-1"
 ynh_app_setting_set --key=timecost --value=-1
+batchlimit="-1"
 ynh_app_setting_set --key=batchlimit --value=-1
+alternatives="-1"
 ynh_app_setting_set --key=alternatives --value=-1
 
+language_source="auto"
 ynh_app_setting_set --key=language_source --value=auto
+language_target="locale"
 ynh_app_setting_set --key=language_target --value=locale
+timeout="500"
 ynh_app_setting_set --key=timeout --value=500
+apikey_link=""
 ynh_app_setting_set --key=apikey_link --value=
+apikey_domain=""
 ynh_app_setting_set --key=apikey_domain --value=
 
 #=================================================
