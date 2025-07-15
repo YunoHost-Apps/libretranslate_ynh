@@ -39,7 +39,7 @@ services = ["__APP__"]
         ask.en = "Disable the web user interface"
         type = "string"
         help.en = ""
-        bind = "LT_DISABLE_WEBUI:/var/www/__APP__/.env"
+        bind = "LT_DISABLE_WEB_UI:/var/www/__APP__/.env"
 
         [main.config.language_source]
         ask.en = "Default source language for frontend"
