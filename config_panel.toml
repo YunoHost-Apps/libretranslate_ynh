@@ -20,7 +20,7 @@ services = ["__APP__"]
         [main.config.used_languages]
         ask.en = "The languages that you want to use in LibreTranslate"
         type = "string"
-        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl)"
+        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl). If you want to remove a language, you have to manually remove the corresponding model in __DATA_DIR__/models"
         bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
 
         [main.config.suggestions]
