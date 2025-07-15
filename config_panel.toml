@@ -26,7 +26,7 @@ services = ["__APP__"]
         [main.config.suggestions]
         ask.en = "The languages that you want to use in LibreTranslate"
         type = "string"
-        help.en = Allow user suggestions"
+        help.en = "Allow user suggestions"
         bind = "LT_SUGGESTIONS:/var/www/__APP__/.env"
 
         [main.config.disable_files]
