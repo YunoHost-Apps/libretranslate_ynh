@@ -11,7 +11,6 @@ version = "1.0"
 name.en = "Configuration options"
 name.fr = "Options de configuration"
 services = ["__APP__"]
-
      
     [main.config]
     name.en = "General configuration"
@@ -20,7 +19,7 @@ services = ["__APP__"]
         [main.config.used_languages]
         ask.en = "The languages that you want to use in LibreTranslate"
         type = "string"
-        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl). If you want to remove a language, you have to remove in this section, but also manually remove the corresponding model in /home/yunohost.app/__APP__/models"
+        help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl). If you want to remove a language, you have to remove it in this section, but also manually remove the corresponding model in /home/yunohost.app/libretranslate/models"
         bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
 
         [main.config.suggestions]
@@ -139,7 +138,7 @@ name = "Build flavor"
         ask.en = "Do you have a gpu or want to run LibreTranslate with the cpu?"
         type = "select"
         choices = ["cuda", "cpu"]
-        help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it. Don't forget that yiu have to force the update or to wait for the next one after adapting this."
+        help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it. Don't forget that you have to force the update or to wait for the next one for this to take effect."
         bind = "ARGOS_DEVICE:/var/www/__APP__/.env"
 
 

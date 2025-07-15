@@ -31,6 +31,10 @@ ynh_app_setting_set_default --key=timeout --value=500
 ynh_app_setting_set_default --key=apikey_link --value=
 ynh_app_setting_set_default --key=apikey_domain --value=
 
+if ynh_app_upgrading_from_version_before 1.7.2~ynh2; then
+   	mv "$install_dir/.local/share/argos-translate/" "$data_dir"/models
+fi
+
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
