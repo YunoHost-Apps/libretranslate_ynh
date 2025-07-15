@@ -48,10 +48,11 @@ pushd $install_dir
 	else  
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.2.0 --extra-index-url https://download.pytorch.org/whl/cpu
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir "numpy<2"
-	
 	fi
 	
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir/" --no-cache-dir
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir 
+
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" "$install_dir"/scripts/compile_locales.py
 popd
 
 pushd "$install_dir"
