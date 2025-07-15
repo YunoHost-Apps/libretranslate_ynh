@@ -24,33 +24,33 @@ services = ["__APP__"]
         bind = "LT_LOAD_ONLY:/var/www/__APP__/.env"
 
         [main.config.suggestions]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Allow user suggestions"
         type = "string"
-        help.en = "Allow user suggestions"
+        help.en = ""
         bind = "LT_SUGGESTIONS:/var/www/__APP__/.env"
 
         [main.config.disable_files]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Disable file translation functionality"
         type = "string"
-        help.en = "Disable file translation functionality"
+        help.en = ""
         bind = "LT_DISABLE_FILES_TRANSLATION:/var/www/__APP__/.env"
 
         [main.config.disable_webui]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Disable the web user interface"
         type = "string"
-        help.en = "Disable the web user interface"
+        help.en = ""
         bind = "LT_DISABLE_WEBUI:/var/www/__APP__/.env"
 
         [main.config.language_source]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Default source language for frontend"
         type = "string"
-        help.en = "Default source language for frontend"
+        help.en = ""
         bind = "LT_FRONTEND_LANGUAGE_SOURCE:/var/www/__APP__/.env"
 
         [main.config.language_target]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Default target language for frontend"
         type = "string"
-        help.en = "Default target language for frontend"
+        help.en = ""
         bind = "LT_FRONTEND_LANGUAGE_TARGET:/var/www/__APP__/.env"
 
     [main.specific]
@@ -58,69 +58,69 @@ services = ["__APP__"]
     name.fr = "Configuration spécifique"
 
         [main.specific.charlimit]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Character limit per translation request"
         type = "string"
-        help.en = "Character limit per translation request"
+        help.en = ""
         bind = "LT_CHAR_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.reqlimit]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Maximum requests per minute per client"
         type = "string"
-        help.en = "Maximum requests per minute per client"
+        help.en = ""
         bind = "LT_REQ_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.hourly_reqlimit]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Maximum requests per hour per client"
         type = "string"
-        help.en = "Maximum requests per hour per client"
+        help.en = ""
         bind = "LT_HOURLY_REQ_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.daily_reqlimit]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Maximum requests per day per client"
         type = "string"
-        help.en = "Maximum requests per day per client"
+        help.en = ""
         bind = "LT_DAILY_REQ_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.flood_threshold]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Maximum request limit offenses before ban"
         type = "string"
-        help.en = "Maximum request limit offenses before ban"
+        help.en = ""
         bind = "LT_REQ_FLOOD_THRESHOLD:/var/www/__APP__/.env"
 
         [main.specific.timecost]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Time cost (in seconds) for request limiting"
         type = "string"
-        help.en = "Time cost (in seconds) for request limiting"
+        help.en = ""
         bind = "LT_REQ_TIME_COST:/var/www/__APP__/.env"
 
         [main.specific.batchlimit]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Maximum number of texts in a batch request"
         type = "string"
-        help.en = "Maximum number of texts in a batch request"
+        help.en = ""
         bind = "LT_BATCH_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.alternatives]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Maximum alternative translations"
         type = "string"
-        help.en = "Maximum alternative translations"
+        help.en = ""
         bind = "LT_ALTERNATIVES_LIMIT:/var/www/__APP__/.env"
 
         [main.specific.timeout]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Translation timeout in milliseconds"
         type = "string"
-        help.en = "Translation timeout in milliseconds"
+        help.en = ""
         bind = "LT_FRONTEND_TIMEOUT:/var/www/__APP__/.env"
 
         [main.specific.apikey_link]
-        ask.en = "The languages that you want to use in LibreTranslate"
+        ask.en = "Link where users can obtain an API key"
         type = "string"
-        help.en = "Link where users can obtain an API key"
+        help.en = ""
         bind = "LT_GET_API_KEY_LINK:/var/www/__APP__/.env"
 
         [main.specific.apikey_domain]
-        help.en = "Disable file translation functionality"
+        ask.en = "Require API key unless request origin matches this domain"
         type = "string"
-        help.en = "Require API key unless request origin matches this domain"
+        help.en = ""
         bind = "LT_REQUIRE_API_KEY_ORIGIN:/var/www/__APP__/.env"
 
 [build]

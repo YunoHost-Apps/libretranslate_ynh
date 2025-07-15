@@ -43,7 +43,7 @@ ram.runtime = "50M"
 
     [install.used_languages]
     ask.en = "Which languages do you plan to use?"
-    help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl) or leave blank if you want to download all"
+    help.en = "Set every languages acronym separeted with a coma (e.g. en,fr,es,sv,nl)"
     type = "string"
     default = "en,fr,es,sv"
     optional = true
