@@ -27,7 +27,7 @@ ynh_app_setting_set_default --key=alternatives --value=-1
 
 ynh_app_setting_set_default --key=language_source --value=auto
 ynh_app_setting_set_default --key=language_target --value=locale
-ynh_app_setting_set_default --key=timeout--value=500
+ynh_app_setting_set_default --key=timeout --value=500
 ynh_app_setting_set_default --key=apikey_link --value=
 ynh_app_setting_set_default --key=apikey_domain --value=
 
