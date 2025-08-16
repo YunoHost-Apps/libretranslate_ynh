@@ -64,16 +64,15 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install Babel==2.12.1 && ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" "$install_dir"/scripts/compile_locales.py
 	
 	if [ "$cuda" = "cuda" ]; then
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch -f https://download.pytorch.org/whl/torch_stable.html
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.8.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 	else  
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch --extra-index-url https://download.pytorch.org/whl/cpu
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir torch==2.8.0 --extra-index-url https://download.pytorch.org/whl/cpu
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir "numpy<2"
 	fi
 	
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir 
 popd
-
 
 pushd "$install_dir"
 	ynh_safe_rm "$install_dir/.cache/pip"
