@@ -5,7 +5,7 @@ name = "LibreTranslate"
 description.en = "Open Source Machine Translation API"
 description.fr = "API de traduction automatique Open Source"
 
-version = "1.7.2~ynh2"
+version = "1.7.3~ynh1"
 
 maintainers = ["Thovi98"]
 
@@ -55,8 +55,8 @@ ram.runtime = "250M"
 [resources]
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.7.2.tar.gz"
-        sha256 = "3f12cdb57c1eef4733a57c5509b0f84c1d18ac4d2ad09e385af60cd8e2deb394"
+        url = "https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.7.3.tar.gz"
+        sha256 = "74bdfdb54e97306763d8bc25f92dc68c0a262ad91f522feafb98c1ffa6426e51"
         in_subdir = true
 
         autoupdate.strategy = "latest_github_release"
