@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "libretranslate"
 name = "LibreTranslate"
-description.en = "Open Source Machine Translation API"
-description.fr = "API de traduction automatique Open Source"
+description.en = "Translate text and files between different languages"
+description.fr = "Traduisez du textes et des fichiers entre différentes langues"
 
 version = "1.7.3~ynh1"
 
