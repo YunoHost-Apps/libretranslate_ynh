@@ -5,7 +5,7 @@ name = "LibreTranslate"
 description.en = "Translate text and files between different languages"
 description.fr = "Traduisez du textes et des fichiers entre différentes langues"
 
-version = "1.8.1~ynh1"
+version = "1.8.3~ynh1"
 
 maintainers = ["Thovi98"]
 
@@ -55,8 +55,8 @@ ram.runtime = "250M"
 [resources]
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.8.1.tar.gz"
-        sha256 = "d77cfb39a68ff63d5179423fd6702a3e643ce51ed07d6229af93df3c31c19e6d"
+        url = "https://github.com/LibreTranslate/LibreTranslate/archive/refs/tags/v1.8.3.tar.gz"
+        sha256 = "e7ca26d79bd482c91da21a6089a97bec3500b2011c8b47fff63fc681c202031c"
         in_subdir = true
 
         autoupdate.strategy = "latest_github_release"
