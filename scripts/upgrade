@@ -59,16 +59,22 @@ ynh_config_add --template=".env" --destination="$install_dir/.env"
 ynh_script_progression "Upgrading $app dependencies..."
 
 pushd $install_dir
+
+	ynh_safe_rm "$install_dir/venv"
+
 	ynh_exec_as_app python3 -m venv "$install_dir/venv"
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade pip gunicorn setuptools wheel
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install Babel==2.12.1 && ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" "$install_dir"/scripts/compile_locales.py
-	
+
+
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir
+
 	if [ "$cuda" = "cuda" ]; then
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" uninstall onnxruntime
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir onnxruntime-gpu>=1.10.0
 	fi
-	
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir 
+
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" cache purge
 popd
 
 pushd "$install_dir"
