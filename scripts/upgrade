@@ -70,7 +70,7 @@ pushd $install_dir
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir
 
 	if [ "$cuda" = "cuda" ]; then
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" uninstall onnxruntime
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" uninstall -y onnxruntime
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir onnxruntime-gpu>=1.10.0
 	fi
 
