@@ -139,6 +139,6 @@ name = "Build flavor"
         type = "select"
         choices = ["cuda", "cpu"]
         help.en = "Cuda installations are way bigger and run only on AVX-enabled CPU so use them only if your system supports it. Don't forget that you have to force the update or to wait for the next one for this to take effect."
-        bind = "ARGOS_DEVICE:/var/www/__APP__/.env"
+        bind = "ARGOS_DEVICE_TYPE:/var/www/__APP__/.env"
 
 

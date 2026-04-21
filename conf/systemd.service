@@ -14,7 +14,7 @@ Restart=always
 Type=simple
 WorkingDirectory=__INSTALL_DIR__
 EnvironmentFile=__INSTALL_DIR__/.env
-ExecStart=__INSTALL_DIR__/venv/bin/libretranslate
+ExecStart=__INSTALL_DIR__/venv/bin/libretranslate --update-models
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
@@ -22,11 +22,11 @@ ExecStart=__INSTALL_DIR__/venv/bin/libretranslate
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
 NoNewPrivileges=yes
 PrivateTmp=yes
-PrivateDevices=yes
+PrivateDevices=no
 RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
 RestrictNamespaces=yes
 RestrictRealtime=yes
-DevicePolicy=closed
+DevicePolicy=auto
 ProtectClock=yes
 ProtectHostname=yes
 ProtectProc=invisible

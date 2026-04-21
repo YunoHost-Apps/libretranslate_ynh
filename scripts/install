@@ -69,12 +69,14 @@ pushd $install_dir
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade pip gunicorn setuptools wheel
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install Babel==2.12.1 && ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" "$install_dir"/scripts/compile_locales.py
 	
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir 
+
 	if [ "$cuda" = "cuda" ]; then
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" uninstall onnxruntime
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" uninstall -y onnxruntime
 	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --no-cache-dir onnxruntime-gpu>=1.10.0
 	fi
-	
-	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install "$install_dir"/ --no-cache-dir 
+
+	ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" cache purge	
 popd
 
 # Remove unneeded files

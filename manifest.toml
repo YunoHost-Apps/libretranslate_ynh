@@ -5,7 +5,7 @@ name = "LibreTranslate"
 description.en = "Translate text and files between different languages"
 description.fr = "Traduisez du textes et des fichiers entre différentes langues"
 
-version = "1.9.5~ynh1"
+version = "1.9.5~ynh2"
 
 maintainers = ["Thovi98"]
 
